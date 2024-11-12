@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Questionnaire 3: Behavioural systems</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Each item of this third two-page questionnaire is a statement that a person may either agree with or
+        disagree with. For each item, indicate how much you agree or disagree with what the item says. Please be as
+        accurate and honest as you can be. You are asked to rate the statements on a 4-point scale, ranging from
+        completely disagreeing to completely agreeing with the statement.
+    </p>
+
+    <br>
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <td style="text-align: center">{{ field.label }}</td>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+    <br>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}

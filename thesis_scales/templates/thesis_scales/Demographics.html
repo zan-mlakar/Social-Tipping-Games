@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Questionnaire 7: Demographics</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        In your last questionnaire of this study, we kindly ask you to provide some demographic information and answer
+        some general feedback questions about the present study.
+    </p>
+
+    <br>
+
+    {% formfields %}
+
+    <br>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}
+
+

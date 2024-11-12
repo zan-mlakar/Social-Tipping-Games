@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Final page</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        You have arrived at the end of the study. We want to kindly thank you for your participation. Your financial
+        payoff will be calculated and paid out at the end of the current day (arriving at your bank account in a few
+        working days). Furthermore, in a few weeks, you will receive an email detailing the contents of the study and
+        our main findings. In case you have any additional questions at this moment, you may directly ask the
+        experimenter present in the room or email the researchers at <i>z.mlakar@rug.nl</i>.
+    </p>
+    <p>
+        <i>Please click on the 'Next' button below and then walk to the experimenter to provide the last information
+            needed in order to finish the study.</i>
+    </p>
+
+    <br>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}

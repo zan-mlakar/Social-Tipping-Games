@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Questionnaire 2: Need for affiliation and need for consistency</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        In this second questionnaire, you can find some statements inquiring about how important social contacts with
+        others are to you and how consistent you try to be in life. For each item, indicate how much you agree or
+        disagree with what the item says. You are asked to rate the statements on a 7-point scale, ranging from
+        strongly disagreeing to strongly agreeing with the statement.
+    </p>
+
+    <br>
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <td style="text-align: center">{{ field.label }}</td>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+    <br>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}
