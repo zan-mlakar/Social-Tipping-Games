@@ -6,7 +6,7 @@ The game is built in python using the oTree platform. See https://otree.readthed
 
 ORGANISATION
 
-The folders 'thesis_intro', 'thesis_game', and 'thesis-scales' contain the different applications that make up the full experiment. Specifically, they
+The folders 'Intro', 'Game', and 'Final' contain the different applications that make up the full experiment. Specifically, they
 contain the instructions, experimental game, and individual characteristics measures, respectively. The folder '_static' contains the different images
 and other similar resources used in the experiment. The file 'settings.py' allows one to manage the set-up of the different (demo) sessions, sequencing
 of apps, admin settings etc.
