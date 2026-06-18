@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">The Product Launch Task</p>
+{% endblock %}
+
+{% block content %}
+
+    <p style="text-align: center"><i><b>Understanding of the task</b></i></p>
+
+        <p style="text-align: center">Your answer is {% if player.und5 %}<span style="color: limegreen">correct</span>{% else %}<span style="color: red">wrong</span>{% endif %}.
+            A new product is released and payoffs realised in the round when all employees endorse the same New Product.</p>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+    <style>
+    .otree-timer {
+        display: none;
+    }
+    </style>
+
+{% endblock %}
