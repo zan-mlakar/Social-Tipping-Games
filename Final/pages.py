@@ -4,9 +4,23 @@ from .models import Constants
 from random import shuffle
 
 
-class Demographics(Page):
+class Start(Page):
+    def before_next_page(self):
+        self.group.total_players()
+
+
+class PreFinalCon(Page):
+    def is_displayed(self):
+        return self.player.total_players == 9
     form_model = 'player'
-    form_fields = ['age', 'gender', 'education', 'prolificid', 'comments']
+    form_fields = ['confcon', 'intracon', 'age', 'gender', 'comments']
+
+
+class PreFinalIncon(Page):
+    def is_displayed(self):
+        return self.player.total_players < 9
+    form_model = 'player'
+    form_fields = ['confincon', 'intraincon', 'age', 'gender', 'comments']
 
 
 class FinalPage(Page):
@@ -14,6 +28,8 @@ class FinalPage(Page):
 
 
 page_sequence = [
-    Demographics,
+    Start,
+    PreFinalCon,
+    PreFinalIncon,
     FinalPage
 ]

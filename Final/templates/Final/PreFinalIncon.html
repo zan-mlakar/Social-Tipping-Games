@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Final pages</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please answer the questions below!
+    </p>
+
+    <br>
+
+    {% formfields %}
+
+    <br>
+
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}
+
+
