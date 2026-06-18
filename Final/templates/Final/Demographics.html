@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p style="text-align: center; color: #017AFF">Demographics</p>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Congratulations, you have successfully finished the central task and arrived in the last part of the study.
+        In it, your are asked to answer a few short questions about your demographic characteristics.
+    </p>
+
+    <br>
+
+    {% formfields %}
+
+    <br>
+
+    <div style="text-align: center">{% next_button %}</div>
+
+{% endblock %}
+
+
