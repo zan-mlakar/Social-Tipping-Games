@@ -5,10 +5,18 @@ from .models import Constants
 
 class BasicIntro(Page):
     timeout_seconds = 120
+    form_model = 'player'
+    form_fields = ['prolificid']
+
+    def before_next_page(self):
+        self.group.determine_nicknames()
 
 
 class GameInstructions(Page):
     timeout_seconds = 600
+
+    def vars_for_template(self):
+        return {"name": self.player.participant.vars['nickname']}
 
 
 class TestingUnderstanding1(Page):
@@ -66,23 +74,28 @@ class UnderstandGame(Page):
     form_fields = ['under']
     timeout_seconds = 30
 
+    def before_next_page(self):
+        self.group.count_waiting()
+
 
 class SecondInstructions(Page):
     def is_displayed(self):
-        return self.player.under
+        return self.player.under == 0
     timeout_seconds = 180
+
+    def vars_for_template(self):
+        return {"name": self.player.participant.vars['nickname']}
 
 
 class WaitingPage(WaitPage):
     template_name = 'Intro/WaitingPage.html'
-    title_text = "Waiting for other players ..."
-    body_text = "Please note that it can take up to 10 minutes for other players to arrive at this wait page. We " \
-                "kindly ask you to remain patient and not exit the study as this waiting time is calculated into the " \
-                "total study time (30 minutes). "
+
+    def vars_for_template(self):
+        return {"num": sum([p.player_count for p in self.group.get_players()])}
 
 
 class PreGame(Page):
-    timeout_seconds = 60
+    timeout_seconds = 30
 
 
 page_sequence = [
