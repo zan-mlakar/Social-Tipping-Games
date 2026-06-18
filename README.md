@@ -14,6 +14,6 @@ of apps, admin settings etc.
 LICENSE
 
 Built on fully open-source platform, no licenses required. However, note that whenever the game is used for the purposes of (scientific) research,
-paper https://doi.org/10.1038/s41467-021-25953-1 should be cited as the source of the
+paper https://www.journals.uchicago.edu/doi/10.1086/731916 and/or https://doi.org/10.1038/s41467-021-25953-1 should be cited as the source of the
 experimental game and paper https://doi.org/10.1016/j.jbef.2015.12.001 as
 the source of the oTree infrastructure on which the game is built.
