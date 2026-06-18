@@ -1,4 +1,4 @@
-Code used for the experimental game in the paper: Mlakar, Ž., Bolderdijk, J. W., Risselada, H., Fennis, B. M., Ye, M., Zino, L., & Cao, M. (2024). Social Tipping Games: Experimental Paradigms for Studying Social Movements. Journal of the Association for Consumer Research, 9(4). https://doi.org/10.1086/731916
+Code used for the experimental game in the paper: Ye, M., Zino, L., Mlakar, Ž., Bolderdijk, J. W., Risselada, H., Fennis, B. M., & Cao, M. (2021). Collective patterns of social diffusion are shaped by individual inertia and trend-seeking. Nature Communications, 12(1), 5698. https://doi.org/10.1038/s41467-021-25953-1
 
 INSTRUCTIONS
 
