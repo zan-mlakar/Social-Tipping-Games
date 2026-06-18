@@ -13,14 +13,19 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'Experiment',
+        'num_demo_participants': 3,
+        'app_sequence': ['Intro', 'Game', 'Final'],
+    },
+    {
         'name': 'Test',
         'num_demo_participants': 3,
         'app_sequence': ['Game'],
     },
     {
-        'name': 'Experiment',
+        'name': 'Demographics',
         'num_demo_participants': 3,
-        'app_sequence': ['Intro', 'Game', 'Final'],
+        'app_sequence': ['Final'],
     }
 ]
 # see the end of this file for the inactive session configs
