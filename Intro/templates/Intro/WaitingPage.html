@@ -1,16 +1,26 @@
 {% extends 'otree/WaitPage.html' %}
 {% load otree %}
-{% block title %}{{ title_text }}{% endblock %}
+{% block title %} Waiting for {{ num }} more player(s) ... {% endblock %}
 {% block content %}
-    {{ body_text }}<br><br>
     <p>
-    <b>Short instructions recap</b><br>
+    Please note that it can take up to 10 minutes for other players to arrive at this wait page. We kindly ask you to
+        remain patient and not exit the study as this waiting time is calculated into the total study time
+        (30 minutes).<br><br>
+    <b>Short instructions recap</b><br><br>
         <i>Your task</i> is to, in each round of the game, privately endorse one of the two New Products and observe
-        how many individuals in your group endorsed each of the two New Products.<br><br>
+        how many and which individuals in your group endorsed each of the two New Products.<br><br>
     <i>Goal of the game:</i> As a group, release one of the two New Products by unanimously endorsing it with everyone
         in your group in a specific round.<br><br>
     <i>Task rewards:</i> You receive more bonus if <br> 1) The New Product is released in earlier rounds of the game (if
         it does not get released at all, everyone in the group receives 0 bonus!), <br> 2) You endorsed the released New
         Product relatively more often than others in your group.
     </p>
+{% endblock %}
+
+{% block app_scripts %}
+    <script>
+setTimeout(function() {
+  location.reload();
+}, 10000);
+      </script>
 {% endblock %}

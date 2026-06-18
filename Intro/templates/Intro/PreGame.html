@@ -7,22 +7,35 @@
 
 {% block content %}
 
-    <p style="text-align: center"><i><b>The game will begin any second now ...</b></i></p>
-    <p>
-        When the timer above expires, the game will begin. Please stay on this page, so you do not miss the beginning
-        of the game!
-    </p><br>
+    <p style="text-align: center; background-color: #AAD3F5; font-size: 24px"><br><b>Get ready! The game will begin in <span id="time-left"></span> seconds ...</b><br><br></p>
 
     <p>
     <b>Short instructions recap</b><br>
         <i>Your task</i> is to, in each round of the game, privately endorse one of the two New Products and observe
-        how many individuals in your group endorsed each of the two New Products.<br><br>
+        how many and which individuals in your group endorsed each of the two New Products.<br><br>
     <i>Goal of the game:</i> As a group, release one of the two New Products by unanimously endorsing it with everyone
         in your group in a specific round.<br><br>
     <i>Task rewards:</i> You receive more bonus if <br> 1) The New Product is released in earlier rounds of the game (if
         it does not get released at all, everyone in the group receives 0 bonus!), <br> 2) You endorsed the released New
         Product relatively more often than others in your group.
     </p>
+
+    <script>
+        let customTimerEle = document.getElementById('time-left');
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                customTimerEle.innerText = event.offset.totalSeconds;
+            });
+        });
+
+    </script>
+
+    <style>
+    .otree-timer {
+        display: none;
+    }
+    </style>
 
 
 {% endblock %}

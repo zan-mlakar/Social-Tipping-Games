@@ -8,36 +8,41 @@
 {% block content %}
 
     <p>
-        Welcome to our study!
+        Welcome to our study! Please note that since the study at hand is a group study, you have a limited amount of time on each page,
+        after which you are automatically redirected to the next one. This rule is used to ensure that the study finishes
+        for everyone in a timely manner. Therefore, <b>we would kindly ask you to make sure you remain focused on the study for its
+        full duration</b>. The full study is expected to take a maximum of 30 minutes (including wait times!).
     </p>
+
     <p>
         <b>Informed consent:</b>
-        In the present study, you will pretend to be a part of a board of directors together with 11 other participants.
-        Your goal will be to collectively decide which new product to launch by making multiple decisions across rounds.
+        In the present study, you will pretend to be part of a board of directors together with 11 other participants.
+        Your goal will be to collectively decide which new product to launch by making a repeated decision across rounds.
         Please note that your responses to this survey are treated anonymously and for research purposes only. You will
         be paid the fixed payoff upon completion of the survey and the performance bonus separately by the end of the
         week. If you wish to stop participating in this research or if you later wish to withdraw any consent given by
         you this will in no way affect you. You may withdraw from this session at any time, without giving any reason
         and without consequences. Also, after today’s session is over, you can still withdraw your results within 24
-        hours without explanation by emailing researchers at <i>z.mlakar@rug.nl</i>.
+        hours without explanation by emailing the researcher at <i>z.mlakar@rug.nl</i>.
     </p>
     <p>
-        Please note that since the study at hand is a group study, you have a limited amount of time on each page,
-        after which you are automatically redirected to the next one. This rule is used to ensure that the study finishes
-        for everyone in a timely manner and that the rest of the group can finish the game regardless of whether some
-        participants drop out. Therefore, <b>we would kindly ask you to make sure you remain focused on the study for its
-        full duration</b>. The full study is expected to take about 30 minutes (including wait times!).
+
     </p>
     <p>
-        By clicking the "Next" button below, you consent to participating in this study and to the conditions stated above.
-        Clicking the "Next" button will take you to a few pages explaining the detailed game instructions. You are given
-        <b>10 minutes</b> to read them. Then, you will be redirected to a waiting page, where you will be ask to wait
-        for all participants to finish reading the instructions. After all participants are done, the game will begin.
-        After the game is finished, you will be asked to answer a few basic demographic questions.
-        Good luck with the study!
+        By typing your ProlificID in the box and clicking the "Next" button below it, you consent to participating in
+        this study and to the conditions stated above. Clicking the "Next" button will take you to a few pages
+        explaining the detailed game instructions. You are given <b>10 minutes</b> to read them and show you understand
+        them. Then, you will be redirected to a waiting page, where you will be ask to wait for all participants to
+        finish reading the instructions. After all participants are done reading, the game will begin. After the game
+        is finished, you will be asked to answer a few basic demographic questions. Good luck!
     </p>
 
     <br>
+
+    {% formfields %}
+
+    <br>
+
     <div style="text-align: center">{% next_button %}</div>
 
     <style>
